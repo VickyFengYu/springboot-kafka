@@ -1,7 +1,7 @@
 package com.demo.kafkastream;
 
-import com.demo.kafkastream.processor.EvenNumberProcessor;
-import com.demo.kafkastream.processor.OddNumberProcessor;
+import com.demo.kafkastream.handler.EvenNumberHandler;
+import com.demo.kafkastream.handler.OddNumberHandler;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.kafka.common.serialization.Serdes;
@@ -24,18 +24,18 @@ import java.util.Map;
 @Configuration
 @EnableKafka
 @EnableKafkaStreams
-public class KafkaStreamConfig {
+public class KStreamConfig {
 
-  Log log = LogFactory.getLog(KafkaStreamConfig.class);
+  Log log = LogFactory.getLog(KStreamConfig.class);
 
   @Value("${kafka.topic.input}")
   private String inputTopic;
 
   @Autowired
-  private OddNumberProcessor oddNumberProcessor;
+  private OddNumberHandler oddNumberHandler;
 
   @Autowired
-  private EvenNumberProcessor evenNumberProcessor;
+  private EvenNumberHandler evenNumberHandler;
 
   @Bean(name = KafkaStreamsDefaultConfiguration.DEFAULT_STREAMS_CONFIG_BEAN_NAME)
   public KafkaStreamsConfiguration kStreamsConfigs(KafkaProperties kafkaProperties) {
@@ -51,8 +51,8 @@ public class KafkaStreamConfig {
   public KStream<String, Long> kStream(StreamsBuilder kStreamBuilder) {
     log.info("inputTopic => " + inputTopic);
     KStream<String, Long> stream = kStreamBuilder.stream(inputTopic);
-    this.oddNumberProcessor.process(stream);
-    this.evenNumberProcessor.process(stream);
+    this.oddNumberHandler.process(stream);
+    this.evenNumberHandler.process(stream);
 
     return stream;
   }

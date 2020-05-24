@@ -1,4 +1,4 @@
-package com.demo.kafkastream.processor;
+package com.demo.kafkastream.handler;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class EvenNumberProcessor {
+public class EvenNumberHandler {
 
-  Log log = LogFactory.getLog(EvenNumberProcessor.class);
+  Log log = LogFactory.getLog(EvenNumberHandler.class);
 
   @Value("${kafka.topic.even-output}")
   private String evenOutput;

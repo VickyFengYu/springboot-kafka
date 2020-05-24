@@ -1,7 +1,7 @@
 Springboot Kafka
 ===================
 
-
+![enter image description here](https://github.com/VickyFengYu/springboot-kafka/blob/master/image/kafka.png?raw=true)
 
 ## <i class="icon-folder-open"></i> Install Kafka
 
@@ -99,29 +99,43 @@ $ bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1
 ## <i class="icon-folder-open"></i> Run Application
 
 ```
-2020-05-24 12:38:34.519  INFO 14540 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 5
-2020-05-24 12:38:34.524  INFO 14540 --- [-StreamThread-1] c.d.k.processor.OddNumberProcessor       : Handle Odd multiply(V,2) => 5
-2020-05-24 12:38:34.637  INFO 14540 --- [ntainer#0-0-C-1] c.d.k.consumer.KafkaDoubleConsumer       : Consumer Double Odd => 10
-2020-05-24 12:38:35.517  INFO 14540 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 6
-2020-05-24 12:38:35.524  INFO 14540 --- [-StreamThread-1] c.d.k.processor.EvenNumberProcessor      : Handle Even Sqrt(V)   => 6
-2020-05-24 12:38:35.633  INFO 14540 --- [ntainer#1-0-C-1] c.d.k.consumer.KafkaSquareConsumer       : Consumer Square =>  36
-2020-05-24 12:38:36.517  INFO 14540 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 7
-2020-05-24 12:38:36.524  INFO 14540 --- [-StreamThread-1] c.d.k.processor.OddNumberProcessor       : Handle Odd multiply(V,2) => 7
-2020-05-24 12:38:36.635  INFO 14540 --- [ntainer#0-0-C-1] c.d.k.consumer.KafkaDoubleConsumer       : Consumer Double Odd => 14
-2020-05-24 12:38:37.518  INFO 14540 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 8
-2020-05-24 12:38:37.527  INFO 14540 --- [-StreamThread-1] c.d.k.processor.EvenNumberProcessor      : Handle Even Sqrt(V)   => 8
-2020-05-24 12:38:37.638  INFO 14540 --- [ntainer#1-0-C-1] c.d.k.consumer.KafkaSquareConsumer       : Consumer Square =>  64
-2020-05-24 12:38:38.518  INFO 14540 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 9
-2020-05-24 12:38:38.524  INFO 14540 --- [-StreamThread-1] c.d.k.processor.OddNumberProcessor       : Handle Odd multiply(V,2) => 9
-2020-05-24 12:38:38.635  INFO 14540 --- [ntainer#0-0-C-1] c.d.k.consumer.KafkaDoubleConsumer       : Consumer Double Odd => 18
-2020-05-24 12:38:39.517  INFO 14540 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 10
-2020-05-24 12:38:39.523  INFO 14540 --- [-StreamThread-1] c.d.k.processor.EvenNumberProcessor      : Handle Even Sqrt(V)   => 10
-2020-05-24 12:38:39.636  INFO 14540 --- [ntainer#1-0-C-1] c.d.k.consumer.KafkaSquareConsumer       : Consumer Square =>  100
-2020-05-24 12:38:40.518  INFO 14540 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 11
-2020-05-24 12:38:40.524  INFO 14540 --- [-StreamThread-1] c.d.k.processor.OddNumberProcessor       : Handle Odd multiply(V,2) => 11
-2020-05-24 12:38:40.637  INFO 14540 --- [ntainer#0-0-C-1] c.d.k.consumer.KafkaDoubleConsumer       : Consumer Double Odd => 22
-2020-05-24 12:38:41.518  INFO 14540 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 12
-2020-05-24 12:38:41.524  INFO 14540 --- [-StreamThread-1] c.d.k.processor.EvenNumberProcessor      : Handle Even Sqrt(V)   => 12
+2020-05-24 13:00:52.817  INFO 14708 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 3
+2020-05-24 13:00:52.824  INFO 14708 --- [-StreamThread-1] c.d.k.handler.OddNumberHandler           : Handle Odd multiply(V,2) => 3
+2020-05-24 13:00:52.934  INFO 14708 --- [ntainer#0-0-C-1] c.d.k.consumer.KafkaDoubleConsumer       : Consumer Double Odd => 6
+2020-05-24 13:00:53.817  INFO 14708 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 4
+2020-05-24 13:00:53.823  INFO 14708 --- [-StreamThread-1] c.d.k.handler.EvenNumberHandler          : Handle Even Sqrt(V)   => 4
+2020-05-24 13:00:53.934  INFO 14708 --- [ntainer#1-0-C-1] c.d.k.consumer.KafkaSquareConsumer       : Consumer Square =>  16
+2020-05-24 13:00:54.815  INFO 14708 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 5
+2020-05-24 13:00:54.822  INFO 14708 --- [-StreamThread-1] c.d.k.handler.OddNumberHandler           : Handle Odd multiply(V,2) => 5
+2020-05-24 13:00:54.929  INFO 14708 --- [ntainer#0-0-C-1] c.d.k.consumer.KafkaDoubleConsumer       : Consumer Double Odd => 10
+2020-05-24 13:00:55.816  INFO 14708 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 6
+2020-05-24 13:00:55.823  INFO 14708 --- [-StreamThread-1] c.d.k.handler.EvenNumberHandler          : Handle Even Sqrt(V)   => 6
+2020-05-24 13:00:55.934  INFO 14708 --- [ntainer#1-0-C-1] c.d.k.consumer.KafkaSquareConsumer       : Consumer Square =>  36
+2020-05-24 13:00:56.816  INFO 14708 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 7
+2020-05-24 13:00:56.823  INFO 14708 --- [-StreamThread-1] c.d.k.handler.OddNumberHandler           : Handle Odd multiply(V,2) => 7
+2020-05-24 13:00:56.935  INFO 14708 --- [ntainer#0-0-C-1] c.d.k.consumer.KafkaDoubleConsumer       : Consumer Double Odd => 14
+2020-05-24 13:00:57.816  INFO 14708 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 8
+2020-05-24 13:00:57.822  INFO 14708 --- [-StreamThread-1] c.d.k.handler.EvenNumberHandler          : Handle Even Sqrt(V)   => 8
+2020-05-24 13:00:57.933  INFO 14708 --- [ntainer#1-0-C-1] c.d.k.consumer.KafkaSquareConsumer       : Consumer Square =>  64
+2020-05-24 13:00:58.817  INFO 14708 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 9
+2020-05-24 13:00:58.824  INFO 14708 --- [-StreamThread-1] c.d.k.handler.OddNumberHandler           : Handle Odd multiply(V,2) => 9
+2020-05-24 13:00:58.934  INFO 14708 --- [ntainer#0-0-C-1] c.d.k.consumer.KafkaDoubleConsumer       : Consumer Double Odd => 18
+2020-05-24 13:00:59.817  INFO 14708 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 10
+2020-05-24 13:00:59.824  INFO 14708 --- [-StreamThread-1] c.d.k.handler.EvenNumberHandler          : Handle Even Sqrt(V)   => 10
+2020-05-24 13:00:59.930  INFO 14708 --- [ntainer#1-0-C-1] c.d.k.consumer.KafkaSquareConsumer       : Consumer Square =>  100
+2020-05-24 13:01:00.818  INFO 14708 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 11
+2020-05-24 13:01:00.824  INFO 14708 --- [-StreamThread-1] c.d.k.handler.OddNumberHandler           : Handle Odd multiply(V,2) => 11
+2020-05-24 13:01:00.933  INFO 14708 --- [ntainer#0-0-C-1] c.d.k.consumer.KafkaDoubleConsumer       : Consumer Double Odd => 22
+2020-05-24 13:01:01.818  INFO 14708 --- [   scheduling-1] c.d.k.producer.KafkaNumberProducer       : Produced => 12
+2020-05-24 13:01:01.823  INFO 14708 --- [-StreamThread-1] c.d.k.handler.EvenNumberHandler          : Handle Even Sqrt(V)   => 12
+2020-05-24 13:01:01.935  INFO 14708 --- [ntainer#1-0-C-1] c.d.k.consumer.KafkaSquareConsumer       : Consumer Square =>  144
 ```
+
+### <i class="icon-folder-open"></i> Reference
+
+[http://kafka.apache.org/quickstart#quickstart_multibroker](http://kafka.apache.org/quickstart#quickstart_multibroker)
+
+[https://blog.parse.ly/post/3886/pykafka-now/](https://blog.parse.ly/post/3886/pykafka-now/r)
+
 
 
