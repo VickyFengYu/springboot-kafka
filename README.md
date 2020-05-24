@@ -1,7 +1,7 @@
 Springboot Kafka
 ===================
 
-![enter image description here](https://github.com/VickyFengYu/springboot-kafka/blob/master/image/kafka.png?raw=true)
+&#8194;&#8194; ![enter image description here](https://github.com/VickyFengYu/springboot-kafka/blob/master/image/kafka.png?raw=true)
 
 ## <i class="icon-folder-open"></i> Install Kafka
 
@@ -17,10 +17,7 @@ tar -xzf kafka_2.12-2.5.0.tgz
 cd kafka_2.12-2.5.0
 ```
 
-
-### Running a Multi-Broker Apache Kafka Cluster on a Single Node
-
-### Configure and start Multiple Kafka Brokers on a Single Node
+### Configure and start multi-broker cluster on a single Node
 
 #### The first broker:
 ```
